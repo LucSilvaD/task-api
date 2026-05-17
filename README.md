@@ -48,3 +48,17 @@ Construir una aplicación pequeña que permita practicar flujo de trabajo modern
 
 5. Abrir documentación interactiva:
     - http://127.0.0.1:8000/docs
+
+## Equipo de trabajo
+Integrantes:
+- Luciano Silva
+- Luisa Mejia
+
+## Convención de commits
+El equipo utilizará mensajes de commit con el siguiente formato:
+- `feat`: nueva funcionalidad
+- `fix`: corrección de errores
+- `docs`: cambios en documentación
+- `refactor`: mejora interna del código
+- `test`: pruebas
+- `chore`: tareas de configuración
