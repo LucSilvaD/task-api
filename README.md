@@ -19,18 +19,17 @@ Construir una aplicación pequeña que permita practicar flujo de trabajo modern
 - GitHub
 
 ## Estructura del proyecto
-`task-api/`
-
-│── `app/`
-
-│ └── `main.py`
-
-│── `docs/`
-
-│── `tests/`
-
+task-api/
+│── app/
+│   ├── `main.py`
+│   ├── `models.py`
+│   ├── routes/
+│   │   └── `product_routes.py`
+│   ├── services/
+│   │   └── `product_service.py`
+│   ├── data/
+│   │   └── `product_repository.py`
 │── `README.md`
-
 │── `requirements.txt`
 
 ## Ejecución local
