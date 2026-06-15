@@ -1,16 +1,26 @@
 from fastapi import FastAPI
-from app.routes.product_routes import router
+from app.config import get_setting
+from app.routes.product_routes import router as product_router
+from app.routes.customer_routes import router as customer_router
 
 app = FastAPI(
-    title="Inventory API",
-    description="Mini API para gestionar un inventario de productos para el curso de Metodologías de Desarrollo",
-    version="1.0.0"
+    title=get_setting("APP_NAME", "Inventory API"),
+    description="API preparada con configuración externa y prácticas básicas de calidad",
+    version=get_setting("APP_VERSION", "1.0.0")
 )
-app.include_router(router)
+
+app.include_router(product_router)
+app.include_router(customer_router)
 
 @app.get("/")
 def home():
+    return {"message": "API lista", "docs": "/docs"}
+
+@app.get("/system/info")
+def system_info():
     return {
-        "message": "Bienvenido a Inventory API",
-        "docs": "/docs"
+        "application": get_setting("APP_NAME", "Inventory API"),
+        "version": get_setting("APP_VERSION", "1.0.0"),
+        "environment": get_setting("ENVIRONMENT", "DEV"),
+        "author": get_setting("AUTHOR", "No definido")
     }

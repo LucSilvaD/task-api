@@ -20,17 +20,27 @@ Construir una aplicación pequeña que permita practicar flujo de trabajo modern
 
 ## Estructura del proyecto
 task-api/
-│── app/
-│   ├── `main.py`
-│   ├── `models.py`
-│   ├── routes/
-│   │   └── `product_routes.py`
-│   ├── services/
-│   │   └── `product_service.py`
-│   ├── data/
-│   │   └── `product_repository.py`
-│── `README.md`
-│── `requirements.txt`
+├── `.env`
+├── `requirements.txt`
+├── `README.md`
+├── logs/
+│   └── `app.log`
+└── app/
+    ├── `main.py`
+    ├── `models.py`
+    ├── `config.py`
+    ├── routes/
+    │   ├── `product_routes.py`
+    │   └── `customer_routes.py`
+    ├── services/
+    │   ├── `product_service.py`
+    │   └── `customer_service.py`
+    ├── data/
+    │   ├── `product_repository.py`
+    │   └── `customer_repository.py`
+    └── utils/
+        ├── `validators.py`
+        └── `logger.py`
 
 ## Ejecución local
 1. Crear entorno virtual:
