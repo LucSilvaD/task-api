@@ -21,8 +21,9 @@ jobs:
 
       - name: Instalar dependencias
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Ejecutar pruebas
         run: |
-          pytest
+          PYTHONPATH=. pytest
