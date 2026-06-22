@@ -10,4 +10,3 @@ client = TestClient(app)
 def test_system_info():
     response = client.get("/system/info")
     assert response.status_code == 200
-#
